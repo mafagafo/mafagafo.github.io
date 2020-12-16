@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+        <script type="text/javascript">
+        	window.addEventListener("load", ()=>{
+                let estilo = document.createElement("link");
+                estilo.rel = "stylesheet";
+                estilo.href = "/css/style.css";
+                document.querySelector("head").append(estilo);
+                let action = document.createElement("script");
+                action.type = "text/javascript";
+                action.src="/script/utils.js";
+                document.body.appendChild(action);
+            });
+        </script>     
+        <title>Galeria</title>
+    </head>
+    <body>
+    	<header>
+            <h1>Pejorativo</h1>
+        </header>
+    	<nav>
+            <a class="link" href="/">Inicial</a>
+            <a class="link" href="#">Midia</a>
+            <a class="link" href="#">Contato</a>
+            <a class="icon" href="javascript:void(0)">&equiv;</a>
+        </nav>
+    	<main>
+            <div class="row">
+                <div class="col">
+                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
+                </div>
+                <div class="col">
+                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
+                </div>
+                <div class="col">
+                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
+                </div>
+                <div class="col">
+                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
+                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
+                </div>            </div>
+        </main>
+    	<aside></aside>
+        <footer></footer>
+
+    </body>
+</html>

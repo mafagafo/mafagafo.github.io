@@ -1,0 +1,36 @@
+{
+	"banner" : [{
+		"tituPub" : "The Triumph of Death",
+		"dataPub" : "13/11/2020",
+		"urlImg" :"/imagens/01.webp",
+		"lege" : "The triumph of death - Pieter Bruegel"
+	},{
+		"tituPub" :"The Triumph of Death",
+		"dataPub" :"13/11/2020",
+		"urlImg" : "/imagens/02.webp",
+		"lege" : "Triumph of Death - Felix Nussbaum."
+	},{
+		"tituPub":"Troll",
+		"dataPub":"13/11/2020",
+		"urlImg":"/imagens/03.webp",
+		"lege" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi facilis ipsam consequuntur iusto?"
+	}],
+	"artPub" : [{
+		"tituPub" : "Titúlo do artigo",
+		"dataPub" : "data da publicação",
+		"matePub" : "Artigo da matéria"
+	}],
+	"Materia" :[{
+		"Titulo" : "Pieter Bruegel - O Velho",
+		"artigo" : "Foi o artista mais importante da pitura brabantina, um pintor e gravurista da região de barbante, conhcido por suas retratações de paisagens e cenas caponesas (a chamada pintura de de gênero); foi também o primeiro pioneiro que optou por fazer as duas modalidade o foco em suas pinturas de destaques.",
+		"Publicacao": "",
+		"author" : "",
+		"imagen" : ""
+	},{
+		"Titulo":"Felix Nossbaum",
+		"artigo":"Foi um pintor de origem judaica, com várias obras que ilustram os horrores do Holocausto, do qual, foi vitima.  Estudou em Hamburgo e Berlim, arte, livre e aplicada (freie und angewandte Kunst). Nos anos 1920 e 30 as suas exposições em Berlim tiveram grande sucesso. Com a chegada ao poder dos Nazis em 1933, foi obrigado a viver no exílio, em Itália, França e finalmente na Bélgica (Bruxelas) com a sua mulher, a polaca Felka Platek, com quem casou em 1937. Com a ocupação pelos alemães e o regime de Vichy, foi internado num campo de concentração em França. Conseguiu no entanto fugir com a sua mulher e esconder-se na casa de um amigo, também um artista, em Bruxelas. Foi traído e denunciado em Junho de 1944 e imediatamente preso, juntamente com a sua mulher. Foi levado para campo de concentração de Malines (ou Mecheln) de onde foi levado para Auschwitz, onde foi assassinado em 2 de Agosto de 1944, presumivelmente com a sua mulher.",
+		"Publicacao":"",
+		"author":"",
+		"imagen":""
+	}]
+}

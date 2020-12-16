@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>ferramenta para desenvolvimento</title>
+	<meta charset="utf-8">
+	<META NAME="DESCRIPTION" CONTENT="Teste PWA (progressive web application); Tenha sempre a sua disposição toda a programacão PEJORATIVO">
+	<META NAME="ABSTRACT" CONTENT="PEJORATIVO">
+	<META NAME="KEYWORDS" CONTENT="PEJORATIVO, grajaú">
+	<META NAME="LANGUAGE" CONTENT="PT">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=5">
+	<meta property="og:title" content="PEJORATIVO">
+	<meta property="og:site_name" content="PEJORATIVO">
+	<meta property="og:url" content="https://caranga.droppages.com">
+	<meta property="og:description" content="Teste PWA (progressive web application); Tenha sempre a sua disposição toda a programacão PEJORATIVO">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://caranga.droppages.com/favicon/android-chrome-512x512.png">
+	<meta name="theme-color" content="#db0800">
+	<link rel="canonical" href="https://caranga.droppages.com/">
+	<title>Pejorativo</title>
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="PEJ">
+	<meta name="apple-mobile-web-app-title" content="PEJ">
+	<meta name="msapplication-starturl" content="/">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" sizes="48x48" href="/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<style type="text/css">
+		html,body{height: 100%;}
+		* {box-sizing: border-box;}
+		section {padding: 05px; color: #fff; font-family: sans-serif; height: 100%;}
+		main{height: 100%;}
+		section:nth-child(odd){
+			background-color: #99b317;
+		}
+		section:nth-child(even){
+			background-color: #b32d20;
+		}
+		label{display: block;}
+		input, textarea, button {
+			width: 100%;
+			padding: 05px; 
+			border-radius: 3px;
+			background-color: #fff;
+			border: thin solid #deff3b;
+		}
+		textarea{resize: none}
+		@media (min-width: 600px){
+			main {
+				grid-template-columns: 50% 50%;
+				grid-gap: 10px;
+				display: grid;
+			}
+			main > section {
+				grid-auto-columns: auto;
+				text-align: justify;
+			}
+		}
+		@media (max-width: 600px){
+			section:nth-child(2n){
+				display: none;
+			}			
+		}
+	</style>
+	<script type="text/javascript">
+		window.addEventListener("load",()=>{
+			var Artigo = [];
+			document.getElementById("btn").onclick =  ()=>{
+				let obj = function(titulo, data, autor, artigo) {
+					this.titulo = titulo;
+					this.data = data;
+					this.autor = autor;
+					this.artigo = artigo;
+					return false
+				}
+				let ti = document.querySelector("#titulo").value, da = document.querySelector("#data").value;
+				let au = document.querySelector("#autor").value, ar = document.querySelector("#artigo").value;
+				let filtro = ar.replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g, "&quot;").replace(/\'/g, "&apos;").replace(/\s/g,"&nbsp;");
+				if(ti === "" && da === "" && ar === "") {
+					alert("É preciso preencher todos os campos");
+				} else {
+					Artigo.push(new obj(ti, da, au,filtro));
+					console.log(JSON.stringify(obj));
+					document.querySelector("#visu").value = JSON.stringify(Artigo);
+					document.querySelector("input[type=reset]").click();
+
+				}
+			}		
+		});
+	function salvar(){
+			let obj = new Blob([document.querySelector("#visu").value],{type:"application/json"});
+			let arqui = URL.createObjectURL(obj);
+			let link = document.createElement("a");
+			link.style.display = "none;";
+			link.href = arqui;
+			link.download = "material.json";
+			link.click();			
+	}
+	</script>
+</head>
+	<body>
+		<main>
+			<section>
+				<h2>Campos</h2>
+				<form enctype="text/plain" method="POST">
+					<label for="titulo">Título</label>
+					<input type="text" name="titulo" id="titulo" placeholder="Título" title="Titulo dó artigo a ser escrito." required="yes">
+					<label for="data">Data</label>
+					<input type="date" name="data" id="data"  title="Data da publicação" required="yes">
+					<label for="autor">Autor</label>
+					<select name="autor" id="autor"  title="Selecione o autor do artigo" required="yes">
+						<option value="at01">Autor 01</option>
+						<option value="at02">Autor 02</option>
+						<option value="at03">Autor 03</option>
+					</select>
+					<label for="artigo">Matéria</label>
+					<textarea name="artigo" id="artigo" title="Insira o artigo" placeholder="Artigo aqui!" required="yes" rows="10"></textarea>
+					<br>
+					<input type="reset" value="limpar">
+					<input type="button" name="btn" id="btn" value="Adicionar">
+				</form>
+				<button onclick="salvar()">Salvar</button>
+			</section>
+			<section>
+				<h2>Visualizar</h2>
+				<textarea  style="width: 100%; height: auto;" rows="10" id="visu" readonly="">
+				</textarea>
+			</section>
+		</main>
+	</body>
+</html>

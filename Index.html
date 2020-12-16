@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Projeto expansão jovem - Grajaú</title>
+        <meta charset="utf-8">
+        <!--GERAL-->
+        <META NAME="DESCRIPTION" CONTENT="Tenha sempre a mão toda a programação do PEJ Grajaú">
+        <META NAME="ABSTRACT" CONTENT="Projeto expanção jovem, Grajaú">
+        <META NAME="KEYWORDS" CONTENT="PEJ, projeto expanção, grajaú">
+        <META NAME="LANGUAGE" CONTENT="PT">
+
+        <link rel="manifest" href="manifest.json">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="PEJ Grajaú">
+        <meta name="apple-mobile-web-app-title" content="PEJ Grajaú">
+        <meta name="theme-color" content="#444444">
+        <meta name="msapplication-navbutton-color" content="#444444">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="image" content="/favicon/android-icon-512x512.png">
+
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-icon-512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="/favicon/android-icon-512x512.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="/favicon/android-icon-144x144.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="/favicon/android-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/android-icon-96x96.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="96x96" href="/favicon/android-icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="/favicon/android-icon-72x72.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/favicon/android-icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon/android-icon-48x48.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="48x48" href="/favicon/android-icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="/favicon/android-icon-36x36.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="36x36" href="/favicon/android-icon-36x36.png">
+        <!-- OG-->
+        <meta property="og:title" content="PEJ Grajaú">
+        <meta property="og:site_name" content="Projeto expanção jovem - Grajaú">
+        <meta property="og:url" content="https://caranga.droppages.com">
+        <meta property="og:description" content="Tenha sempre a mão toda a programação do PEJ Grajaú">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="https://caranga.droppages.com/favicon/android-icon-512x512.png">
+        <script>
+            window.addEventListener("load", function(){
+                let el2 = document.createElement("link");
+                let elemento = document.createElement("script");
+                document.body.appendChild(elemento);
+                elemento.src="/script/utils.js";
+                document.head.prepend(el2);
+                el2.rel="stylesheet";
+                el2.href="/css/style.css";
+                if('serviceWorker' in navigator){
+                    navigator.serviceWorker.register("/SW.js").then(function(resgitro){
+                        navigator.serviceWorker.ready.then(event=>event.sync.register("Sinc",{minInterval : 24 * 60 * 60 * 1000}))
+                        .then(()=>console.log("sincronisação registrada")).catch(err=>console.log("não foi possível registar", err));
+                        console.info("Service Worker instalado");
+                    }, function(erro){
+                        console.warn("Não foi possível instalar o Service Worker");
+                    });
+                    navigator.serviceWorker.ready.then(event=>event.periodicSync.register("bg-sinc",{minInterval: 24*60*60*1000}))
+                    .then(()=>console.log("Sync Back ok")).catch(err=>console.log("erro", err));
+                }
+            },false);
+            const dataCo = {title: "PEJORATIVO", text: "Acompanhe de onde estiver todos os eventos PEJORATIVO!", url:"https://caranga.droppages.com"};
+            async function compartilhar(){
+                try {
+                    await navigator.share(dataCo);
+                }catch(err){
+                    console.log("erro", err);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Pejorativo</h1>
+        </header>
+        <nav>
+            <a class="link" href="/" title="Inicio">Inicio</a>
+            <a class="link" href="#" tile="Midia">Midia</a>
+            <a class="link" href="#" title="contato">Contato</a>
+            <a class="link" href="/galeria.html">Galeria</a>
+            <a class="icon" href="javascript:compartilhar()">compartilhar</a>
+            <a class="icon" id="btmn" href="javascript:void(0)">&equiv;</a>
+        </nav>
+        <div id="banner"></div>
+        <main>
+            <noscript>
+                <p>&#128542;</p>
+                <p>Seu <mark>javascript</mark> parece estar desabilitado.</p>
+            </noscript>
+        </main>
+        <aside>
+            <h3>Titulo Aqui!</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis minima doloribus et dicta odio veniam modi fugiat quos unde illo natus quis, ipsa voluptate architecto. At temporibus fuga ipsam illum.
+            </p>
+            <button class="btnIns">
+                Instalar
+            </button>
+        </aside>
+        <footer>
+            <p>&copy; 2020 todos os direitos de copia reservados</p>
+        </footer>
+    </body>
+</html>

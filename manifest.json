@@ -82,7 +82,7 @@
         "type" :"image/png"
       },
       {
-        "src" : "/favicon/icon/android-icon-48x48",
+        "src" : "/favicon/icon/android-icon-48x48.png",
         "sizes" :"48x48",
         "type":"image/png"
       },

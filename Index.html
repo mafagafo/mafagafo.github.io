@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
     <head>
-        <meta charset="utf8">     
-        <title>Galeria</title>
-        <!--geral-->
+        <title>Projeto expansão jovem - Grajaú</title>
+        <meta charset="utf-8">
+        <!--GERAL-->
         <META NAME="DESCRIPTION" CONTENT="Tenha sempre a mão toda a programação do PEJ Grajaú">
         <META NAME="ABSTRACT" CONTENT="Projeto expanção jovem, Grajaú">
         <META NAME="KEYWORDS" CONTENT="PEJ, projeto expanção, grajaú">
@@ -50,11 +50,11 @@
             window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
             }
         </script> -->
-        <link rel="stylesheet" href="/css/style.css">        
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-    	<header>
-            <h1>Pejorativo</h1>
+        <header>
+            <h1>Cabeçalho</h1>
         </header>
         <nav style="z-index: 5;">
             <a href="/" title="pagina inicial" rel="follow">Inicíal</a>
@@ -64,51 +64,25 @@
                 <button id="share" title="Compartilhar">Share</button>
                 <button title="Menu cascata" id="btmn">&equiv;</button>
             </div>
-        </nav>        
-    	<main>
-            <div class="control">
-                <div>
-                    <button onclick="one()">1</button>
-                    <button onclick="two()">2</button>
-                    <button onclick="tree()">4</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/04.webp" style="width: 100%;">
-                </div>
-                <div class="col">
-                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/04.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
-                </div>
-                <div class="col">
-                    <img src="/imagens/loader.png" data-src="/imagens/04.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
-                </div>
-                <div class="col">
-                    <img src="/imagens/loader.png" data-src="/imagens/02.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/03.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/04.webp" style="width: 100%;">
-                    <img src="/imagens/loader.png" data-src="/imagens/01.webp" style="width: 100%;">
-                </div>            
-            </div>
+        </nav>
+        <div id="banner"></div>
+        <main>
+            <noscript>
+                <p>Esta pagina nescessita do <em>javascript</em> habilitado.</p>
+            </noscript>
         </main>
         <aside>
             <p>tenha sempre a disposição toda a nossa programação ao alcance de um toque, instale nosso aplicativo, sem anúncios, pequeno, rápido e leve.</p>
             <button class="install">Instalar</button>
-        </aside>        
+        </aside>
         <footer>
             <p>
                 <strong>Obscurity</strong>
             </p>
         </footer>
         <script type="text/javascript" src="/script/app.js"></script>
+        <script>
+            conte();
+        </script>
     </body>
 </html>

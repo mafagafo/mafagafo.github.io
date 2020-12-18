@@ -1,4 +1,4 @@
-const cacheList = ["/","/Index.html","/script/utils.js","/css/style.css"];
+const cacheList = ["/","/script/app.js","/css/style.css"];
 const My = "LIB"
 self.addEventListener("install", function (event) {
     event.waitUntil(
